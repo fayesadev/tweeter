@@ -32,6 +32,6 @@ body {
  }
 
  hr.solid {
-  border-top: 3px solid #bbb;
+  border-top: 3px solid rgb(26, 42, 112);
   color: rgb(26, 26, 81);
  }
