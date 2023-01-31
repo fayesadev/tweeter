@@ -1,0 +1,15 @@
+.new-tweet {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  height: 60px;
+  width: 50%;
+}
+
+button {
+  font-family: 'Bungee', cursive;
+}
