@@ -2,6 +2,19 @@ header {
   height: 520px;
   width: 100%;
   display: flex;
-  background-color: aliceblue;
-  color: black;
+  background-color: rgb(255, 183, 0);
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.avatar {
+  display: flex;
+  
+}
+
+.name {
+  font-size: 24px;
 }

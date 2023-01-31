@@ -25,3 +25,7 @@ span {
   justify-content: space-between;
   align-items: center;
 }
+
+.fa-angles-down {
+  color: red;
+}
