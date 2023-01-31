@@ -12,24 +12,25 @@ textarea {
   height: 50px;
   width: 100%;
   background: transparent;
-  color: black;
+  color: #545149;
   line-height: 20px;
   border: none;
+  outline: none;
   border-bottom: 2px solid #545149;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-button {
+div {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Bungee', cursive;
+}
+
+button {
   border: none;
   background-color: #4056A1;
   color: white;
   height: 1.5em;
   width: 5em;
-}
-
-div {
-  display: flex;
-  justify-content: space-between;
 }
