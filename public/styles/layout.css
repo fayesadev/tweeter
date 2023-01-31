@@ -24,3 +24,14 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ main {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+ }
+
+ hr.solid {
+  border-top: 3px solid #bbb;
+  color: rgb(26, 26, 81);
+ }
