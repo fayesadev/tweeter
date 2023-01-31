@@ -2,19 +2,25 @@ header {
   height: 520px;
   width: 100%;
   display: flex;
-  background-color: rgb(255, 183, 0);
+  background-color: rgb(141, 244, 216);
+  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
 .avatar {
   display: flex;
-  
+  justify-content: center;
+  align-items: center;
+  position: fixed;
 }
 
 .name {
   font-size: 24px;
+  position: fixed;
+  top: 370px;
+  margin-bottom: 15px;
 }
