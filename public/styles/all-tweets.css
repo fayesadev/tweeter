@@ -1,4 +1,17 @@
+.all-tweets{
+  height: auto;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+article {
+  border: 2px solid #545149;
+  margin-top: 10px;
+}
 .tweet {
+  height: 100%;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
