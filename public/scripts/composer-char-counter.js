@@ -1,29 +1,37 @@
 $(document).ready(function() {
 
-  $('textarea').click(()=> {
-    console.log("I was clicked!");
-  })
+  // $('textarea').click(function() {
+  //   console.log("I was clicked!");
+  //   console.log(this);
+  // })
 
-  $('textarea').blur(()=> {
-    console.log("I was blurred");
-  })
+  // $('textarea').blur(function() {
+  //   console.log("I was blurred");
+  //   console.log(this);
+  // })
 
-  $('textarea').keydown(()=> {
-    console.log("keydown");
-  })
+  // $('textarea').keydown(function() {
+  //   console.log("keydown");
+  //   console.log(this);
+  // })
 
-  $('textarea').keyup(()=> {
-    console.log("keyup");
-  })
+  // $('textarea').keyup(function() {
+  //   console.log("keyup");
+  //   console.log(this);
+  // })
 
-  $('textarea').keypress(()=> {
-    console.log("keypress");
-  })
+  // $('textarea').keypress(function () {
+  //   console.log("keypress");
+  //   console.log(this);
+  // })
 
-  $('textarea').change(()=> {
-    console.log("change");
-  })
-  $('textarea').input(()=> {
+  // $('textarea').change(function() {
+  //   console.log("change");
+  //   console.log(this);
+  // })
+
+  $('textarea', this).on('input',function() {
     console.log("input");
+    console.log();
   })
 });
