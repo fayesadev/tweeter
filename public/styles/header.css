@@ -2,7 +2,7 @@ header {
   height: 520px;
   width: 100%;
   display: flex;
-  background-color: rgb(141, 244, 216);
+  background: #99B2DD;
   background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
   color: white;
   font-family: 'Source Sans Pro', sans-serif;

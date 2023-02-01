@@ -6,7 +6,7 @@ $(document).ready(function() {
     const charLeft = limit - charCount;
 
     if (charLeft < 0) {
-      $('output').css('color', '#FF0000');
+      $('output').addClass('limit');
     } else {
       $('output').css('color', '#545149');
     }
