@@ -39,20 +39,21 @@ $(document).ready(function() {
   
     const markup = `
       <article class="tweet">
-        <header class="tweet">
-        <div class="profile">
-          <image src="${avatar}">
-          <h4 class="username">${username}</h4>
-        </div>
+        <header class="tweet-header">
+          <div class="profile">
+            <image src="${avatar}">
+            <h4 class="username">${username}</h4>
+          </div>
+          <h4 class="handle">${handle}</h4>
         </header>
           <p>${content}</p>
         <footer>
           <p>${timeStamp}</p>
           <div class="icons">
-          <i class="fa-solid fa-flag"></i>
-          <i class="fa-solid fa-retweet"></i>
-          <i class="fa-solid fa-heart"></i>
-        </div>
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
       </article>`
   
     return markup;

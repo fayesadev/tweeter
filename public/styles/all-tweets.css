@@ -23,6 +23,11 @@ article:hover {
   margin-left: 20px;
   font-size: 18px;
   font-weight: 300;
+  color:#545149
+}
+
+.handle {
+  color: #949392;
 }
 
 .profile {
@@ -44,6 +49,17 @@ article:hover {
   align-items: flex-start;
   justify-content: flex-start;
   background: transparent;
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  padding-top: 5px;
 }
 
 footer {
