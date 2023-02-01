@@ -15,6 +15,10 @@ article {
   padding-right: 15px;
 }
 
+article:hover {
+  box-shadow:
+}
+
 .username {
   margin-left: 20px;
   font-size: 18px;
@@ -46,7 +50,6 @@ footer {
   height: 50px;
   width: 100%;
   display: flex;
-  /* background: rgba(0, 0, 0, 0.047); */
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -61,5 +64,16 @@ footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* background: rgba(202, 249, 141, 0.047); */
+}
+
+.fa-flag:hover {
+  color: rgb(141, 244, 216);
+}
+
+.fa-retweet:hover {
+  color: rgb(141, 244, 216);
+}
+
+.fa-heart:hover {
+  color: rgb(141, 244, 216);
 }
