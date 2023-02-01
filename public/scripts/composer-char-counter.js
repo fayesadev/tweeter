@@ -4,6 +4,10 @@ $(document).ready(function() {
     const limit = 140;
     const charCount = $(this).val().length;
     const charLeft = limit - charCount;
-    console.log(charLeft);
+
+    if (charLeft < 0) {
+      $('output').css('color', '#FF0000')
+    }
+    $('output').val(charLeft);
   })
 });
