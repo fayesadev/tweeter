@@ -55,7 +55,7 @@ $(document).ready(function() {
       return;
     }
     if ($input.length > limit) {
-      // event.stopImmediatePropagation();
+      event.stopImmediatePropagation();
       alert("Tweet tweet that's too long of a message tweet");
       return;
     }
@@ -64,14 +64,12 @@ $(document).ready(function() {
   });
 
   const loadTweets = function() {
-    const $submit = $('#submit-tweet');
-    const $input = $('#tweet-text').val();
-
-    $submit.on('submit', function() {
+    $('#submit-tweet').on('submit', function() {
       $.get('/tweets', function(data) {
         renderTweets(data);
       })
-      $input.reset();
+      //Clear text area after submission
+      $('textarea').val('');
     });
   };
 
