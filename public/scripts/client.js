@@ -4,14 +4,20 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
+  
+  const escape = function (str) {
+    let text = document.createElement("text");
+    text.appendChild(document.createTextNode(str));
+    return text.innerHTML;
+  };
 
   const createTweetElement = function(tweet) {
     const username = tweet.user.name;
     const handle = tweet.user.handle;
     const avatar = tweet.user.avatars;
-    const content = tweet.content.text;
+    const content = escape(tweet.content.text);
     const timeStamp = timeago.format(tweet.created_at);
-  
+    
     const markup = `
       <article class="tweet">
         <header class="tweet-header">
@@ -41,6 +47,12 @@ $(document).ready(function() {
     }
   }
 
+  const loadTweets = function() {
+    $.get('/tweets', function(data) {
+      renderTweets(data);
+    });
+  };
+
   $('#submit-tweet').submit(function(event) {
     event.preventDefault();
     const $text = $(this).serialize();
@@ -50,7 +62,7 @@ $(document).ready(function() {
     const $input =  $('textarea').val();
 
     if ($input.length === 0) {
-      // event.stopImmediatePropagation();
+      event.stopImmediatePropagation();
       alert("There's nothing here! Tweet");
       return;
     }
@@ -61,23 +73,18 @@ $(document).ready(function() {
     }
    
     $.post('/tweets', $text)
+    .then(()=>{
+      loadTweets();
+      //Clear text area after submission and reset character counter
+      $('textarea').val('');
+      $('output').html(140);
+    });
   });
 
-  const loadTweets = function() {
-    $('#submit-tweet').on('submit', function(event) {
-      event.preventDefault();
-      $.get('/tweets', function(data) {
-        renderTweets(data);
-      })
-      //Clear text area after submission
-      $('textarea').val('');
-      $('output').get(0).reset();
-    });
-  };
+  // loadTweets();
+  
 /// BUGS TO FIX: 
-/// character counter doesnt reset after a successful submit
+
 /// page renders and shows tweets twice
-/// tweet shows right after submit half the time
-  loadTweets();
 
 });
