@@ -71,10 +71,13 @@ $(document).ready(function() {
       })
       //Clear text area after submission
       $('textarea').val('');
-      $('textarea').get(0).reset();
+      $('output').get(0).reset();
     });
   };
-
+/// BUGS TO FIX: 
+/// character counter doesnt reset after a successful submit
+/// page renders and shows tweets twice
+/// tweet shows right after submit half the time
   loadTweets();
 
 });
