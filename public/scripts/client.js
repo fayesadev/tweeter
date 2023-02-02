@@ -64,12 +64,14 @@ $(document).ready(function() {
   });
 
   const loadTweets = function() {
-    $('#submit-tweet').on('submit', function() {
+    $('#submit-tweet').on('submit', function(event) {
+      event.preventDefault();
       $.get('/tweets', function(data) {
         renderTweets(data);
       })
       //Clear text area after submission
       $('textarea').val('');
+      $('textarea').get(0).reset();
     });
   };
 
