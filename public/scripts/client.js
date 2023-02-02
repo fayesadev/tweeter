@@ -3,8 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-import * as timeago from 'timeago.js';
-
 $(document).ready(function() {
 
   const createTweetElement = function(tweet) {
@@ -39,13 +37,19 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     }
   }
 
   $('#submit-tweet').submit(function(event) {
     event.preventDefault();
     const text = $(this).serialize();
+    const emptyTextChar = 5;
+    if (text.length === emptyTextChar) {
+      event.stopImmediatePropagation();
+      alert("There's nothing here!");
+      return;
+    }
     $.post('/tweets', text);
   });
 
@@ -55,7 +59,7 @@ $(document).ready(function() {
       $.get('/tweets', function(data) {
         renderTweets(data);
       })
-    })
-  }
+    });
+  };
   loadTweets();
-})
+});
