@@ -44,12 +44,22 @@ $(document).ready(function() {
   $('#submit-tweet').submit(function(event) {
     event.preventDefault();
     const text = $(this).serialize();
-    const emptyTextChar = 5;
-    if (text.length === emptyTextChar) {
-      event.stopImmediatePropagation();
-      alert("There's nothing here!");
+
+    //140 character limit for tweets
+    const limit = 140;
+    const input =  $('textarea').val();
+
+    if (input.length === 0) {
+      // event.stopImmediatePropagation();
+      alert("There's nothing here! Tweet");
       return;
     }
+    if (input.length > limit) {
+      // event.stopImmediatePropagation();
+      alert("Tweet tweet that's too long of a message tweet");
+      return;
+    }
+   
     $.post('/tweets', text);
   });
 
