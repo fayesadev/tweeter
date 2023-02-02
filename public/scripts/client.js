@@ -3,6 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+import * as timeago from 'timeago.js';
+
 $(document).ready(function() {
 
   const createTweetElement = function(tweet) {
@@ -10,7 +12,7 @@ $(document).ready(function() {
     const handle = tweet.user.handle;
     const avatar = tweet.user.avatars;
     const content = tweet.content.text;
-    const timeStamp = Date (tweet.created_at);
+    const timeStamp = timeago.format(tweet.created_at);
   
     const markup = `
       <article class="tweet">
