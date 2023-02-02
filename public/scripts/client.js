@@ -43,33 +43,38 @@ $(document).ready(function() {
 
   $('#submit-tweet').submit(function(event) {
     event.preventDefault();
-    const text = $(this).serialize();
+    const $text = $(this).serialize();
 
     //140 character limit for tweets
     const limit = 140;
-    const input =  $('textarea').val();
+    const $input =  $('textarea').val();
 
-    if (input.length === 0) {
+    if ($input.length === 0) {
       // event.stopImmediatePropagation();
       alert("There's nothing here! Tweet");
       return;
     }
-    if (input.length > limit) {
+    if ($input.length > limit) {
       // event.stopImmediatePropagation();
       alert("Tweet tweet that's too long of a message tweet");
       return;
     }
    
-    $.post('/tweets', text);
+    $.post('/tweets', $text)
   });
 
   const loadTweets = function() {
-    const $button = $('#submit-tweet');
-    $button.on('submit', function() {
+    const $submit = $('#submit-tweet');
+    const $input = $('#tweet-text').val();
+
+    $submit.on('submit', function() {
       $.get('/tweets', function(data) {
         renderTweets(data);
       })
+      $input.reset();
     });
   };
+
   loadTweets();
+
 });
