@@ -55,8 +55,11 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
       <!-- New tweet section-->
       <section class="new-tweet">
+        <h3 id="error-empty" class="error"><i>tweet tweet </i> there's nothing here!<i>tweet tweet </i></h3>
+        <h3 id="error-limit" class="error"><i>tweet tweet </i> over the character limit bud <i>tweet tweet</i></h3>
         <h2>Compose Tweet</h2>
         <form id="submit-tweet" method="POST" action="/tweets">
           <!-- <label for="tweet-text">What are you humming about?</label> -->
