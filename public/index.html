@@ -45,7 +45,7 @@
     
     <!-- Main header with user profile -->
     <header>
-      <div class="avatar">
+      <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
@@ -55,16 +55,28 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
-
-      <!-- New tweet section-->
+    <main>
+      <!-- Create new tweet section-->
       <section class="new-tweet">
-        <h3 id="error-empty" class="error"><i class="fa-solid fa-crow"></i><i>tweet tweet </i> there's nothing here!<i>tweet tweet</i><i class="fa-solid fa-crow"></i></h3>
-        <h3 id="error-limit" class="error"><i class="fa-solid fa-crow"></i><i>tweet tweet </i> over the character limit bud <i>tweet tweet</i><i class="fa-solid fa-crow"></i></h3>
-        <h2>Compose Tweet</h2>
+
+        <!-- Error message if text is empty -->
+        <h3 id="error-empty" class="error">
+          <i class="fa-solid fa-crow"></i>
+          <i>tweet tweet </i>there's nothing here! <i>tweet tweet</i>
+          <i class="fa-solid fa-crow"></i>
+        </h3>
+
+        <!-- Error message if text is over character limit -->
+        <h3 id="error-limit" class="error">
+          <i class="fa-solid fa-crow"></i>
+          <i>tweet tweet </i>over the character limit bud <i>tweet tweet</i>
+          <i class="fa-solid fa-crow"></i>
+        </h3>
+
+        <h2>What are you humming about?</h2>
         <form id="submit-tweet" method="POST" action="/tweets">
           <!-- <label for="tweet-text">What are you humming about?</label> -->
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" id="tweet-text"></textarea>
           <div>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>

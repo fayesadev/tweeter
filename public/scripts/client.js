@@ -20,8 +20,8 @@ $(document).ready(function() {
     const timeStamp = timeago.format(tweet.created_at);
     
     const markup = `
-      <article class="tweet">
-        <header class="tweet-header">
+      <article>
+        <header>
           <div class="profile">
             <image src="${avatar}">
             <h4 class="username">${username}</h4>
@@ -87,5 +87,5 @@ $(document).ready(function() {
   });
 
   loadTweets();
-  
+
 });

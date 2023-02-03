@@ -1,12 +1,10 @@
 .new-tweet {
   width: 80vw;
-  height: auto;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   font-family: 'Source Sans Pro', sans-serif;
-  
 }
 
 textarea {
@@ -22,7 +20,7 @@ textarea {
   font-weight: bold;
 }
 
-div {
+form div {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
