@@ -28,7 +28,7 @@ $(document).ready(function() {
           </div>
           <h4 class="handle">${handle}</h4>
         </header>
-          <p class="content">${content}</p>
+          <p>${content}</p>
         <footer>
           <p>${timeStamp}</p>
           <div class="icons">

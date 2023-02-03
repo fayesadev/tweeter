@@ -20,6 +20,8 @@ article {
   align-items: flex-start;
   justify-content: flex-start;
   background: transparent;
+  overflow: visible;
+  overflow-wrap: anywhere;
 }
 
 article:hover {
@@ -36,10 +38,6 @@ article header {
   width: 100%;
   padding-top: 5px;
 }
-
-/* .content {
-  flex-wrap: wrap;
-} */
 
 .profile {
   width: 50%;
