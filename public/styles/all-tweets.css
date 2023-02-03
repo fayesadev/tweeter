@@ -90,3 +90,14 @@ footer {
 .fa-heart:hover {
   color: #ff331f;
 }
+
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Write Tablet only CSS here */
+}
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  /* body:  */
+
+}
