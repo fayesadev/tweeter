@@ -31,13 +31,14 @@ div {
 .error {
   border: 2px solid #ff331f;
   color:#ff331f;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   padding: 0.5em;
   font-size: 18px;
   font-weight: 600;
 }
+
 .error i {
   font-size: 14px;
   margin-right: 1em;

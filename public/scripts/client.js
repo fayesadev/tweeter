@@ -5,6 +5,7 @@
  */
 $(document).ready(function() {
   
+  //Convers 
   const escape = function (str) {
     let text = document.createElement("text");
     text.appendChild(document.createTextNode(str));
@@ -27,7 +28,7 @@ $(document).ready(function() {
           </div>
           <h4 class="handle">${handle}</h4>
         </header>
-          <p>${content}</p>
+          <p class="content">${content}</p>
         <footer>
           <p>${timeStamp}</p>
           <div class="icons">
@@ -60,24 +61,27 @@ $(document).ready(function() {
     //140 character limit for tweets
     const limit = 140;
     const $input =  $('textarea').val();
+    const $empty = $('#error-empty');
+    const $overLimit = $('#error-limit');
 
     if ($input.length === 0) {
       event.stopImmediatePropagation();
-      alert("There's nothing here! Tweet");
+      $empty.slideDown().css("display", "flex").delay(3000).slideUp();
       return;
     }
     if ($input.length > limit) {
       event.stopImmediatePropagation();
-      alert("Tweet tweet that's too long of a message tweet");
+      $overLimit.slideDown().css("display", "flex").delay(3000).slideUp();
       return;
     }
    
     $.post('/tweets', $text)
     .then(()=>{
       loadTweets();
-      //Clear text area after submission and reset character counter
+      //Clear text area after submission and reset character counter/error message
       $('textarea').val('');
       $('output').html(140);
+      $('.error').slideUp();
     });
   });
 
