@@ -46,13 +46,15 @@ article header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  overflow: visible;
+  overflow-wrap: break-word;
 }
 
 .username {
   margin-left: 20px;
   font-size: 18px;
   font-weight: 300;
-  color:#545149
+  color: #545149;
 }
 
 .handle {
