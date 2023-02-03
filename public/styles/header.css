@@ -1,18 +1,17 @@
 header {
-  height: 520px;
   background: #99B2DD;
   background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.avatar {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
 }
 
 .name {
   font-size: 24px;
   position: static;
-  top: 0px;
-  bottom: 100px;
 }
