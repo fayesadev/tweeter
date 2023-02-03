@@ -77,18 +77,15 @@ $(document).ready(function() {
    
     $.post('/tweets', $text)
     .then(()=>{
-      loadTweets();
-      //Clear text area after submission and reset character counter/error message
+      //Clear text area after submission and reset character counter
       $('textarea').val('');
       $('output').html(140);
-      $('.error').slideUp();
+      //Load the new tweet along with the rest of the existing tweets
+      $('#tweets-container').empty();
+      loadTweets();
     });
   });
 
-  // loadTweets();
+  loadTweets();
   
-/// BUGS TO FIX: 
-
-/// page renders and shows tweets twice
-
 });

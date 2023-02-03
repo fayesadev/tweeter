@@ -10,21 +10,21 @@ nav {
   position: fixed;
 }
 
-span {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 24px;
-}
-
-#headline {
+.headline {
   font-family: 'Bungee', cursive;
   font-size: 40px;
 }
 
-.rightcontainer {
+nav div {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+span {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
 }
 
 .fa-angles-down {
