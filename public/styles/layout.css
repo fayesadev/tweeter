@@ -16,7 +16,8 @@ html {
 
 body {
   color: #545149;
-  background-color: #f5faef;
+  /* background-color: #EDF6F9; */
+  background-color: #cbf3f0;
   font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -129,6 +130,7 @@ main {
   nav {
     height: 120px;
     padding: 2em;
+    max-width: 1440px;
   }
 
   .headline {
@@ -141,6 +143,7 @@ main {
 
   header {
     width: 33.3%;
+    max-width: 720px;
     float: left;
     height: auto;
     display:flex;

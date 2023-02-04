@@ -8,24 +8,27 @@
 }
 
 article {
-  border: 2px solid #545149;
+  /* border: 2px solid #545149; */
+  border-radius: 25px;
+  background-color: #EDF6F9;
   width: 100%;
   margin-top: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   color: #545149;
   font-family: 'Source Sans Pro', sans-serif;;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background: transparent;
+  /* background: transparent; */
   overflow: visible;
   overflow-wrap: anywhere;
 }
 
 article:hover {
-  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.219);
+  /* box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.219); */
+  box-shadow: 0 4px 5px 3px rgba(0,0,0,.2);
 }
 
 article header {
@@ -36,7 +39,7 @@ article header {
   background: transparent;
   height: 100%;
   width: 100%;
-  padding-top: 5px;
+  margin-top: 8px;
 }
 
 .profile {

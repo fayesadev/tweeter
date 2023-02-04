@@ -1,17 +1,23 @@
 .new-tweet {
   width: 100%;
   padding-bottom: 30px;
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   font-family: 'Source Sans Pro', sans-serif;
+}
+.new-tweet h2 {
+  /* text-shadow: 1px 1px 2px #545149; */
+  font-size: 32px;
+  color: #545149;
 }
 
 textarea {
   height: 50px;
   width: 100%;
   background: transparent;
-  color: #545149;
+  /* color: #545149; */
   line-height: 20px;
   border: none;
   outline: none;
@@ -45,15 +51,21 @@ form div {
 
 button {
   border: none;
-  background-color: #4056A1;
+  background-color: #FFBF69;
   color: white;
-  height: 1.5em;
-  width: 5em;
+  padding: 0.6rem;
+  /* height: 1.5em;
+  width: 5em; */
+  border-radius: 10px;
 }
 
 button:hover {
-  box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.219);
+  box-shadow: 1px 2px 3px rgba(0,0,0,.2);
 }
+
+/* .counter {
+  text-shadow: 1px 1px 2px #545149;
+} */
 
 .limit {
   color:#ff331f;
