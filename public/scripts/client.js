@@ -1,17 +1,13 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 $(document).ready(function() {
   
-  //Convers 
+  //Encodes string to become safe HTML and prevent XSS
   const escape = function (str) {
     let text = document.createElement("text");
     text.appendChild(document.createTextNode(str));
     return text.innerHTML;
   };
 
+  //Creates HTML markup of user's tweet passed in an object
   const createTweetElement = function(tweet) {
     const username = tweet.user.name;
     const handle = tweet.user.handle;
@@ -41,6 +37,7 @@ $(document).ready(function() {
     return markup;
   }
   
+  //Renders new tweet and prepends it to container
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
@@ -48,12 +45,14 @@ $(document).ready(function() {
     }
   }
 
+  //Loads page
   const loadTweets = function() {
     $.get('/tweets', function(data) {
       renderTweets(data);
     });
   };
 
+  //Post request to /tweets after a successful submit
   $('#submit-tweet').submit(function(event) {
     event.preventDefault();
     const $text = $(this).serialize();
@@ -63,7 +62,8 @@ $(document).ready(function() {
     const $input =  $('textarea').val();
     const $empty = $('#error-empty');
     const $overLimit = $('#error-limit');
-
+    
+    //Show error message depending on character count
     if ($input.length === 0) {
       event.stopImmediatePropagation();
       $empty.slideDown().css("display", "flex").delay(3000).slideUp();

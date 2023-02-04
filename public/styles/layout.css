@@ -16,7 +16,6 @@ html {
 
 body {
   color: #545149;
-  /* background-color: #EDF6F9; */
   background-color: #cbf3f0;
   font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -60,6 +59,10 @@ main {
       width: 90%;
     }
 
+    .new-tweet h2 {
+      font-size: 24px;
+    }
+
     .profile {
       font-size: 12px;
       overflow-wrap: break-word;
@@ -72,6 +75,7 @@ main {
     
     .handle {
       font-size: 14px;
+      overflow-wrap: anywhere;
     }
     
   }
@@ -117,6 +121,10 @@ main {
   main {
     width: 90%;
   }
+
+  .new-tweet h2 {
+    font-size: 28px;
+  }
 }
 
 /* Laptops / Desktops: minimum width of 1024px */
@@ -130,7 +138,7 @@ main {
   nav {
     height: 120px;
     padding: 2em;
-    max-width: 1440px;
+    max-width: 1500px;
   }
 
   .headline {
@@ -166,5 +174,9 @@ main {
     float: right;
     padding: 2em;
     margin-top: 120px;
+  }
+
+  .new-tweet h2 {
+    font-size: 30px;
   }
 }
